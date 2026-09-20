@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# SQLite database and logs (generated at runtime)
+data/*.sqlite3
+data/*.sqlite3-wal
+data/*.sqlite3-shm
+data/*.log
+!data/.gitkeep
+
+# Temp files
+*.tmp
+*.bak
+*~
+.DS_Store
+
+# Temporary Office files
+~$*.docx
+~$*.pptx
+~$*.xlsx
+.~lock.*#
+
+# IDE
+.vscode/
+.idea/

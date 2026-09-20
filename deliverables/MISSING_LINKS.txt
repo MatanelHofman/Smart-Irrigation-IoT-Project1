@@ -1,0 +1,47 @@
+Smart Irrigation IoT System - Missing links before submission
+================================================================
+
+Two links must be added manually before this project is submitted. Both are
+currently marked as placeholders in the presentation file
+(Smart_Irrigation_Project_Presentation_HE.pptx, slide 11 "Demo & Links").
+
+1. [ADD_DEMO_VIDEO_LINK]
+   A link to the short demo video, once it is uploaded somewhere the
+   instructor can access it (e.g. YouTube unlisted, Google Drive, Moodle).
+   A real, silent screen-capture demo already exists at:
+       deliverables/Smart_Irrigation_Short_Demo.mp4
+   Upload this file (optionally with narration added) and paste its link
+   in place of [ADD_DEMO_VIDEO_LINK] in the presentation.
+
+2. [ADD_PRESENTATION_RECORDING_LINK]
+   A link to the 10-12 minute recorded presentation (see
+   docs/presentation_script_he.md for the full narrated script). This
+   recording has not been made in this environment (it requires a human
+   voice reading the script on camera/screen) and must be produced and
+   uploaded by the students.
+
+Other items marked [להשלמה] (to be completed) in the project summary
+document (deliverables/Smart_Irrigation_Project_Summary_HE.docx/.pdf):
+
+- Semester (סמסטר) - not specified in the project instructions.
+- Hebrew academic year (שנה העברית) - not specified in the project
+  instructions.
+
+These were intentionally left blank rather than guessed, per the
+assignment rules ("Do not invent a semester, Hebrew year, or submission
+date that was not provided").
+
+Everything else in the submission package is complete and based on a real
+run of the working system (code, tests, README, traceability table,
+screenshots, presentation content, and project summary).
+
+Updating the two links automatically
+-------------------------------------
+Once both links are ready, run this instead of editing the slide by hand
+(requires "pip install python-pptx"):
+
+    python deliverables/update_presentation_links.py \
+        --video-link "https://your-video-link" \
+        --recording-link "https://your-recording-link"
+
+It replaces both placeholders in place and keeps them as clickable links.

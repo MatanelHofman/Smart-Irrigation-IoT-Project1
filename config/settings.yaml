@@ -1,0 +1,30 @@
+# Rule engine thresholds and general settings for the Smart Irrigation IoT System.
+# Kept outside the GUI/application code so the rules can be tuned without touching Python files.
+
+soil_moisture:
+  alarm_max: 20        # 0-20%  -> ALARM, soil very dry, pump ON in automatic mode
+  warning_max: 35       # 21-35% -> WARNING, soil dry, pump ON in automatic mode
+  hysteresis_min: 36     # 36-44% -> hysteresis zone, pump state is not changed
+  hysteresis_max: 44
+  info_min: 45          # 45%+   -> INFO, moisture sufficient, pump OFF in automatic mode
+
+temperature:
+  warning_min_celsius: 32   # temperature >= 32C raises an additional WARNING
+
+events:
+  # Minimum seconds between two identical repeated events, so the same
+  # state is not published/logged on every single sensor message.
+  repeat_interval_seconds: 30
+
+devices:
+  dht_device_id: dht-01
+  soil_device_id: soil-knob-01
+  pump_device_id: pump-relay-01
+  button_device_id: control-button-01
+
+emulators:
+  dht_publish_interval_seconds: 2
+  pump_heartbeat_interval_seconds: 5
+  dht_initial_temperature_celsius: 24.0
+  dht_initial_humidity_percent: 50.0
+  soil_initial_moisture_percent: 55
